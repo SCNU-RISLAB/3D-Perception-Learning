@@ -6,7 +6,7 @@
 
 **体素表示**(Voxel Representation)是另一种重要的3D数据表示方法，它将空间划分为规则的网格单元。在学习过程中需要理解体素化过程、分辨率与内存消耗之间的权衡关系，以及如何在体素网格上应用3D卷积操作。**稀疏表示**(Sparse Representation)对优化计算效率至关重要，特别是对实时应用。
 
-**投影方法**如**鸟瞰图**(Bird's Eye View, BEV)和**距离视图**(Range View, RV)将3D数据转换为2D表示，允许应用成熟的2D卷积网络。不同投影方法有各自的优缺点，影响着原始3D信息的保留或丢失。相关综述可参考[3D Deep Learning for Multi-modal Data Processing: A Review](https://ieeexplore.ieee.org/document/9744513) (Wang et al., IEEE TPAMI 2022)。
+**投影方法**如**鸟瞰图**(Bird's Eye View, BEV)和**距离视图**(Range View, RV)将3D数据转换为2D表示，允许应用成熟的2D卷积网络。不同投影方法有各自的优缺点，影响着原始3D信息的保留或丢失。
 
 ## 基于点云的方法
 
