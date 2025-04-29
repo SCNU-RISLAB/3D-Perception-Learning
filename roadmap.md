@@ -44,7 +44,7 @@
 
 ### 多视图融合方法
 
-**多视图融合**方法综合利用不同表示或传感器的互补信息，提高感知性能。[**AVOD**](https://arxiv.org/abs/1712.02294) (Ku et al., IROS 2018)融合了相机和激光雷达的特征，通过BEV和前视图的结合提高检测精度。在研究中需要理解特征融合的不同策略，如**早期融合**(Early Fusion)、**中期融合**(Mid-level Fusion)和**晚期融合**(Late Fusion)。[**MVF**](https://arxiv.org/abs/1910.13326) (Zhou et al., CoRL 2019)创新性地设计了点级和BEV级特征的融合机制，有效提高了特征表示能力。[**PointPainting**](https://arxiv.org/abs/1911.10150) (Vora et al., CVPR 2020)提出了一种简单而有效的融合方法，将2D图像分割结果投影到点云上，为3D检测提供语义线索。[**DeepFusion**](https://arxiv.org/abs/2203.08195) (Li et al., CVPR 2022)设计了一种可学习的点云和图像对齐机制，实现了端到端的多模态特征融合。[**TransFusion**](https://arxiv.org/abs/2203.11496) (Bai et al., CVPR 2022)利用Transformer架构设计了一种跨模态注意力融合机制，大幅提升了多传感器融合的性能。多视图融合展示了如何通过结合不同表示的优势构建更强大的感知系统。
+**多视图融合**方法综合利用不同表示或传感器的互补信息，提高感知性能。[**AVOD**](https://arxiv.org/abs/1712.02294) (Ku et al., IROS 2018)融合了相机和激光雷达的特征，通过BEV和前视图的结合提高检测精度。在研究中需要理解特征融合的不同策略，如**早期融合**(Early Fusion)、**中期融合**(Mid-level Fusion)和**晚期融合**(Late Fusion)。[**PointPainting**](https://arxiv.org/abs/1911.10150) (Vora et al., CVPR 2020)提出了一种简单而有效的融合方法，将2D图像分割结果投影到点云上，为3D检测提供语义线索。[**DeepFusion**](https://arxiv.org/abs/2203.08195) (Li et al., CVPR 2022)设计了一种可学习的点云和图像对齐机制，实现了端到端的多模态特征融合。[**TransFusion**](https://arxiv.org/abs/2203.11496) (Bai et al., CVPR 2022)利用Transformer架构设计了一种跨模态注意力融合机制，大幅提升了多传感器融合的性能。多视图融合展示了如何通过结合不同表示的优势构建更强大的感知系统。
 
 ## 3D感知常用数据集
 
