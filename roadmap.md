@@ -22,7 +22,7 @@
 
 ### VoxelNet与体素表示
 
-[**VoxelNet**](https://arxiv.org/abs/1711.06396) (Zhou & Tuzel, CVPR 2018)是将点云体素化并应用3D卷积进行特征提取的代表性工作。它首先将点云划分为体素网格，然后使用**点云特征编码**(Voxel Feature Encoding, VFE)层从每个体素中提取特征，最后应用3D卷积网络进行目标检测。[**VoxNet**](https://arxiv.org/abs/1505.00880) (Maturana & Scherer, IROS 2015)是早期的体素化方法，使用3D卷积神经网络直接处理占用网格表示的3D数据，为后续研究奠定了基础[**OctNet**](https://arxiv.org/abs/1611.05009) (Riegler et al., CVPR 2017)利用八叉树结构高效表示3D数据，显著减少内存占用，能够在保持高分辨率的同时处理大规模3D数据。体素表示的关键挑战在于分辨率与计算效率的权衡。过高的分辨率会导致内存占用和计算量剧增，而过低的分辨率则会丢失几何细节。**稀疏卷积**(Sparse Convolution)技术对优化体素表示的效率至关重要。
+[**VoxelNet**](https://arxiv.org/abs/1711.06396) (Zhou & Tuzel, CVPR 2018)是将点云体素化并应用3D卷积进行特征提取的代表性工作。它首先将点云划分为体素网格，然后使用**点云特征编码**(Voxel Feature Encoding, VFE)层从每个体素中提取特征，最后应用3D卷积网络进行目标检测。[**OctNet**](https://arxiv.org/abs/1611.05009) (Riegler et al., CVPR 2017)利用八叉树结构高效表示3D数据，显著减少内存占用，能够在保持高分辨率的同时处理大规模3D数据。体素表示的关键挑战在于分辨率与计算效率的权衡。过高的分辨率会导致内存占用和计算量剧增，而过低的分辨率则会丢失几何细节。**稀疏卷积**(Sparse Convolution)技术对优化体素表示的效率至关重要。
 
 ### PointPillars与柱体表示
 
