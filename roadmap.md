@@ -40,7 +40,7 @@
 
 ### Range View(RV)方法与SqueezeSeg系列
 
-**距离视图**方法将3D点云投影到球形或柱形表面，生成类似于雷达扫描的2D图像。[**SqueezeSeg**](https://arxiv.org/abs/1710.07368) (Wu et al., ICRA 2018)专门针对激光雷达点云的语义分割任务。重点理解**极坐标投影**的原理、处理遮挡和距离不均匀采样的策略。[**RangeNet++**](https://arxiv.org/abs/1911.06368) (Milioto et al., IROS 2019)改进了距离视图表示的效率和精度。关注其中的**KNN后处理策略**，如何解决投影过程中的信息丢失问题。RV方法的主要优势在于它保留了激光雷达的原始测量模式，适合处理大规模室外场景。[**SalsaNext**](https://arxiv.org/abs/2003.03653) (Cortinhal et al., IROS 2020)引入了上下文模块和像素自适应模糊器，显著提高了分割精度。[**PolarNet**](https://arxiv.org/abs/2003.14032) (Zhang et al., CVPR 2020)提出了基于极坐标表示的语义分割网络，通过重新分配点云数据缓解了不均匀采样问题。[**Cylinder3D**](https://arxiv.org/abs/2008.01550) (Zhu et al., CVPR 2021)提出了基于柱形分区的3D卷积网络，有效结合了点云的不规则性和卷积网络的规则性。
+**距离视图**方法将3D点云投影到球形或柱形表面，生成类似于雷达扫描的2D图像。[**SqueezeSeg**](https://arxiv.org/abs/1710.07368) (Wu et al., ICRA 2018)专门针对激光雷达点云的语义分割任务。重点理解**极坐标投影**的原理、处理遮挡和距离不均匀采样的策略。关注其中的**KNN后处理策略**，如何解决投影过程中的信息丢失问题。RV方法的主要优势在于它保留了激光雷达的原始测量模式，适合处理大规模室外场景。[**SalsaNext**](https://arxiv.org/abs/2003.03653) (Cortinhal et al., IROS 2020)引入了上下文模块和像素自适应模糊器，显著提高了分割精度。[**PolarNet**](https://arxiv.org/abs/2003.14032) (Zhang et al., CVPR 2020)提出了基于极坐标表示的语义分割网络，通过重新分配点云数据缓解了不均匀采样问题。[**Cylinder3D**](https://arxiv.org/abs/2008.01550) (Zhu et al., CVPR 2021)提出了基于柱形分区的3D卷积网络，有效结合了点云的不规则性和卷积网络的规则性。
 
 ### 多视图融合方法
 
