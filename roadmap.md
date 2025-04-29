@@ -121,7 +121,7 @@ nuScenes引入了自己的评估指标NDS(nuScenes Detection Score)，它结合�
 
 ### 位置识别与定位(Place Recognition, PR)
 
-**位置识别**是识别机器人所在位置的任务，是自主导航的关键组成部分。[**PointNetVLAD**](https://arxiv.org/abs/1804.03492) (Uy & Lee, CVPR 2018)结合了PointNet和NetVLAD的优势，用于大规模点云位置识别。[**LPD-Net**](https://arxiv.org/abs/1904.03349) (Liu et al., IROS 2019)引入了局部特征聚合和图卷积网络，增强了对环境变化的鲁棒性。[**SOE-Net**](https://arxiv.org/abs/2006.03997) (Xia et al., IROS 2020)设计了二阶嵌入模块，更好地捕获点云的结构特征。[**MinkLoc3D**](https://arxiv.org/abs/2011.04530) (Komorowski et al., 3DV 2021)采用稀疏体素卷积和Transformer结构，在大规模定位任务中取得了显著进展。[**PPT-Net**](https://arxiv.org/abs/2108.05392) (Hui et al., ICCV 2021)探索了基于Transformer的点云位置识别方法。近年来，**基于局部特征**的方法展示了更好的鲁棒性，能够处理部分遮挡和环境变化。在实践中，结合**语义信息**可以提高位置识别的精度，例如忽略动态物体和临时结构的影响。
+**位置识别**是识别机器人所在位置的任务，是自主导航的关键组成部分。[**PointNetVLAD**](https://arxiv.org/abs/1804.03492) (Uy & Lee, CVPR 2018)结合了PointNet和NetVLAD的优势，用于大规模点云位置识别。[**SOE-Net**](https://arxiv.org/abs/2006.03997) (Xia et al., IROS 2020)设计了二阶嵌入模块，更好地捕获点云的结构特征。[**MinkLoc3D**](https://arxiv.org/abs/2011.04530) (Komorowski et al., 3DV 2021)采用稀疏体素卷积和Transformer结构，在大规模定位任务中取得了显著进展。近年来，**基于局部特征**的方法展示了更好的鲁棒性，能够处理部分遮挡和环境变化。在实践中，结合**语义信息**可以提高位置识别的精度，例如忽略动态物体和临时结构的影响。
 
 ### 场景流估计(Scene Flow Estimation, SFE)
 
