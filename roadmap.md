@@ -36,7 +36,7 @@
 
 ### 基于Bird's Eye View(BEV)的方法
 
-**鸟瞰图**方法将3D点云投影到水平面上，形成俯视图表示，广泛应用于自动驾驶感知。[**MV3D**](https://arxiv.org/abs/1611.07759) (Chen et al., CVPR 2017)是早期将BEV与其他视图融合的代表性工作。PointPillars实际上也可以看作是一种BEV方法，因为它最终将点云信息投影到BEV视图上进行检测。BEV表示的主要优势在于它保留了物体的水平位置和尺寸信息，同时降低了问题的复杂度。近年来，[**PIXOR**](https://arxiv.org/abs/1902.06326) (Yang et al., CVPR 2018)提出了一个基于BEV表示的单阶段检测器，实现了实时3D目标检测。[**CenterPoint**](https://arxiv.org/abs/2006.11275) (Yin et al., CVPR 2021)通过预测物体中心点和属性实现高效检测，成为新的基准方法。[**BEVDet**](https://arxiv.org/abs/2112.11790) (Huang et al., ICRA 2022)将图像特征直接转换到BEV空间，使用单目相机实现3D目标检测。[**BEVFusion**](https://arxiv.org/abs/2205.13542) (Liu et al., ICRA 2023)提出了一种在BEV空间下融合相机和激光雷达数据的统一框架。
+**鸟瞰图**方法将3D点云投影到水平面上，形成俯视图表示，广泛应用于自动驾驶感知。[**MV3D**](https://arxiv.org/abs/1611.07759) (Chen et al., CVPR 2017)是早期将BEV与其他视图融合的代表性工作。PointPillars实际上也可以看作是一种BEV方法，因为它最终将点云信息投影到BEV视图上进行检测。BEV表示的主要优势在于它保留了物体的水平位置和尺寸信息，同时降低了问题的复杂度。[**PIXOR**](https://arxiv.org/abs/1902.06326) (Yang et al., CVPR 2018)提出了一个基于BEV表示的单阶段检测器，实现了实时3D目标检测。[**CenterPoint**](https://arxiv.org/abs/2006.11275) (Yin et al., CVPR 2021)通过预测物体中心点和属性实现高效检测，成为新的基准方法。[**BEVDet**](https://arxiv.org/abs/2112.11790) (Huang et al., ICRA 2022)将图像特征直接转换到BEV空间，使用单目相机实现3D目标检测。[**BEVFusion**](https://arxiv.org/abs/2205.13542) (Liu et al., ICRA 2023)提出了一种在BEV空间下融合相机和激光雷达数据的统一框架。
 
 ### Range View(RV)方法与SqueezeSeg系列
 
@@ -113,7 +113,7 @@ nuScenes引入了自己的评估指标NDS(nuScenes Detection Score)，它结合�
 
 ### 3D目标检测(3D Object Detection)
 
-**3D目标检测**是自动驾驶感知的核心任务，要求模型输出物体的3D边界框、类别和朝向等信息。目前主要有三类方法：**基于体素的方法**(VoxelNet、SECOND)、**基于点的方法**([**PointRCNN**](https://arxiv.org/abs/1812.04244) (Shi et al., CVPR 2019))和**基于投影的方法**(PointPillars、PIXOR)。近年来，**一阶段检测器**如CenterPoint逐渐成为主流，它们通过预测物体中心和属性实现高效检测。[**3DSSD**](https://arxiv.org/abs/2002.10187) (Yang et al., CVPR 2020)简化了点云特征学习流程，移除了特征传播层和复杂的重采样策略，提供了高效的单阶段解决方案。[**PV-RCNN**](https://arxiv.org/abs/1912.13192) (Shi et al., CVPR 2020)结合了点级和体素级特征，在点-体素融合学习中取得了显著进展。[**Voxel R-CNN**](https://arxiv.org/abs/2012.15712) (Deng et al., AAAI 2021)通过体素RoI池化加速了特征提取，实现了更高效的区域卷积特征提取。在研究过程中需要关注**多任务学习**如何提高检测效率，例如同时进行检测和跟踪，或检测和映射。
+**3D目标检测**是自动驾驶感知的核心任务，要求模型输出物体的3D边界框、类别和朝向等信息。目前主要有三类方法：**基于体素的方法**(VoxelNet、SECOND)、**基于点的方法**([**PointRCNN**](https://arxiv.org/abs/1812.04244) (Shi et al., CVPR 2019))和**基于投影的方法**(PointPillars、PIXOR)。**一阶段检测器**如CenterPoint逐渐成为主流，它们通过预测物体中心和属性实现高效检测。[**3DSSD**](https://arxiv.org/abs/2002.10187) (Yang et al., CVPR 2020)简化了点云特征学习流程，移除了特征传播层和复杂的重采样策略，提供了高效的单阶段解决方案。[**PV-RCNN**](https://arxiv.org/abs/1912.13192) (Shi et al., CVPR 2020)结合了点级和体素级特征，在点-体素融合学习中取得了显著进展。[**Voxel R-CNN**](https://arxiv.org/abs/2012.15712) (Deng et al., AAAI 2021)通过体素RoI池化加速了特征提取，实现了更高效的区域卷积特征提取。在研究过程中需要关注**多任务学习**如何提高检测效率，例如同时进行检测和跟踪，或检测和映射。
 
 ### 3D语义分割(3D Semantic Segmentation)
 
@@ -121,15 +121,16 @@ nuScenes引入了自己的评估指标NDS(nuScenes Detection Score)，它结合�
 
 ### 位置识别与定位(Place Recognition, PR)
 
-**位置识别**是识别机器人所在位置的任务，是自主导航的关键组成部分。[**PointNetVLAD**](https://arxiv.org/abs/1804.03492) (Uy & Lee, CVPR 2018)结合了PointNet和NetVLAD的优势，用于大规模点云位置识别。[**SOE-Net**](https://arxiv.org/abs/2006.03997) (Xia et al., IROS 2020)设计了二阶嵌入模块，更好地捕获点云的结构特征。[**MinkLoc3D**](https://arxiv.org/abs/2011.04530) (Komorowski et al., 3DV 2021)采用稀疏体素卷积和Transformer结构，在大规模定位任务中取得了显著进展。近年来，**基于局部特征**的方法展示了更好的鲁棒性，能够处理部分遮挡和环境变化。在实践中，结合**语义信息**可以提高位置识别的精度，例如忽略动态物体和临时结构的影响。
+**位置识别**是识别机器人所在位置的任务，是自主导航的关键组成部分。[**PointNetVLAD**](https://arxiv.org/abs/1804.03492) (Uy & Lee, CVPR 2018)结合了PointNet和NetVLAD的优势，用于大规模点云位置识别。[**SOE-Net**](https://arxiv.org/abs/2006.03997) (Xia et al., IROS 2020)设计了二阶嵌入模块，更好地捕获点云的结构特征。[**MinkLoc3D**](https://arxiv.org/abs/2011.04530) (Komorowski et al., 3DV 2021)采用稀疏体素卷积和Transformer结构，在大规模定位任务中取得了显著进展。**基于局部特征**的方法展示了更好的鲁棒性，能够处理部分遮挡和环境变化。在实践中，结合**语义信息**可以提高位置识别的精度，例如忽略动态物体和临时结构的影响。
+
+### 移动物体分割(Moving Object Segmentation/Motion Segmentation, MOS)
+
+**移动物体分割**是区分静态环境与动态物体的任务。结合**深度学习**和**几何约束**的方法展示了更好的性能，特别是在处理缓慢移动物体和远距离物体方面，极大促进了自动驾驶系统在复杂动态环境中的安全性。
 
 ### 场景流估计(Scene Flow Estimation, SFE)
 
-**场景流估计**是计算点云间点级运动场的任务。[**FlowNet3D**](https://arxiv.org/abs/1806.01411) (Liu et al., CVPR 2019)是早期将点云学习应用于场景流估计的代表性工作，通过设计流嵌入层在点云间建立对应关系。[**PointPWC**](https://arxiv.org/abs/1911.12408) (Wu et al., CVPR 2020)引入了层次化架构和代价体积，提高了流估计的精度和效率。[**FLOT**](https://arxiv.org/abs/2007.11142) (Puy et al., ECCV 2020)基于最优传输理论设计了点云匹配算法，增强了对大位移的处理能力。[**HPLFlowNet**](https://arxiv.org/abs/1906.05332) (Gu et al., CVPR 2019)提出了混合点格点特征学习架构，在保持点云几何特性的同时加速计算。[**FESTA**](https://arxiv.org/abs/2104.10680) (Wang et al., CVPR 2021)将自注意力机制引入流估计，有效建模点间长距离依赖关系。**场景流信息**可用于动态物体分割和轨迹预测，这对自动驾驶系统的安全至关重要。近年来，结合时序信息的4D点云处理方法也逐渐受到关注。
+**场景流估计**是计算点云间点级运动场的任务。[**FlowNet3D**](https://arxiv.org/abs/1806.01411) (Liu et al., CVPR 2019)是早期将点云学习应用于场景流估计的代表性工作，通过设计流嵌入层在点云间建立对应关系。[**PointPWC**](https://arxiv.org/abs/1911.12408) (Wu et al., CVPR 2020)引入了层次化架构和代价体积，提高了流估计的精度和效率。[**FLOT**](https://arxiv.org/abs/2007.11142) (Puy et al., ECCV 2020)基于最优传输理论设计了点云匹配算法，增强了对大位移的处理能力。[**HPLFlowNet**](https://arxiv.org/abs/1906.05332) (Gu et al., CVPR 2019)提出了混合点格点特征学习架构，在保持点云几何特性的同时加速计算。**场景流信息**可用于动态物体分割和轨迹预测，这对自动驾驶系统的安全至关重要。结合时序信息的4D点云处理方法也逐渐受到关注。
 
-### 移动物体分割(Moving Object Segmentation, MOS)
-
-**移动物体分割**是区分静态环境与动态物体的任务。[**LiDAR-MOS**](https://arxiv.org/abs/2003.05704) (Li et al., RA-L 2020)通过比较多帧点云之间的几何不一致性来检测移动物体，是早期的基于几何学的方法。[**4D-PLS**](https://arxiv.org/abs/2012.12236) (Aygun et al., CVPR 2021)提出了一种基于4D点云分割的方法，结合时序信息和空间特征，提高了分割精度。[**MotionSeg3D**](https://arxiv.org/abs/2207.14157) (Li et al., ECCV 2022)设计了一种残差模块，有效区分移动物体和传感器运动引起的位移。[**RigidFlow**](https://arxiv.org/abs/2203.00822) (Zheng et al., CVPR 2022)利用刚性运动假设，通过区分刚性和非刚性运动模式识别移动物体。[**SLIM**](https://arxiv.org/abs/2210.16296) (Mersch et al., CVPR 2023)结合了稀疏图像和激光雷达数据，实现了更精确的动态物体分割。近年来，结合**深度学习**和**几何约束**的方法展示了更好的性能，特别是在处理缓慢移动物体和远距离物体方面。这些方法的进步极大促进了自动驾驶系统在复杂动态环境中的安全性。
 
 ## 数据集选择与实践建议
 
@@ -155,7 +156,7 @@ nuScenes引入了自己的评估指标NDS(nuScenes Detection Score)，它结合�
 
 ### 多模态感知与融合(Multi-modal Perception and Fusion)
 
-多模态感知利用不同传感器的互补信息，提高系统鲁棒性和精度。近年来，基于Transformer的多模态融合方法如[TransFusion](https://arxiv.org/abs/2203.11496) (Bai et al., CVPR 2022)和[BEVFusion](https://arxiv.org/abs/2205.13542) (Liu et al., ICRA 2023)取得了显著进展。BEV空间作为共同表示空间的优势越来越受到重视，多模态融合对于构建全天候、全场景的感知系统至关重要。
+多模态感知利用不同传感器的互补信息，提高系统鲁棒性和精度。基于Transformer的多模态融合方法如[TransFusion](https://arxiv.org/abs/2203.11496) (Bai et al., CVPR 2022)和[BEVFusion](https://arxiv.org/abs/2205.13542) (Liu et al., ICRA 2023)取得了显著进展。BEV空间作为共同表示空间的优势越来越受到重视，多模态融合对于构建全天候、全场景的感知系统至关重要。
 
 ### 实时系统与部署优化(Real-time Systems and Deployment Optimization)
 
