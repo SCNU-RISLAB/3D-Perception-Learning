@@ -117,7 +117,7 @@ nuScenes引入了自己的评估指标NDS(nuScenes Detection Score)，它结合�
 
 ### 3D语义分割(3D Semantic Segmentation)
 
-**3D语义分割**要求为点云中的每个点分配语义标签，是场景理解的基础任务。主要方法包括**基于点的方法**(PointNet++)、**基于体素的方法**([**MinkowskiNet**](https://arxiv.org/abs/1904.08755) (Choy et al., CVPR 2019))，以及**基于投影的方法**(SqueezeSeg)。[**RandLA-Net**](https://arxiv.org/abs/1911.11236) (Hu et al., CVPR 2020)提出了一种高效的随机采样和局部特征聚合策略，能够处理大规模点云数据。[**KPConv**](https://arxiv.org/abs/1904.08889) (Thomas et al., ICCV 2019)通过可变形卷积克服了点云的不规则性，在多个基准上取得了显著性能。[**PointASNL**](https://arxiv.org/abs/2003.00362) (Yan et al., CVPR 2020)结合了注意力机制和局部-全局依赖性建模，提高了细粒度分割的准确性。语义分割的关键挑战在于处理点云的巨大规模和类别不平衡问题。常用技术包括**采样策略**、**加权损失函数**和后处理方法如**条件随机场**(Conditional Random Field, CRF)。**多模态信息融合**对提高分割精度尤为重要，特别是对于具有相似几何形状的类别。
+**3D语义分割**要求为点云中的每个点分配语义标签，是场景理解的基础任务。主要方法包括**基于点的方法**(PointNet++)、**基于体素的方法**([**MinkowskiNet**](https://arxiv.org/abs/1904.08755) (Choy et al., CVPR 2019))，以及**基于投影的方法**(SqueezeSeg)。[**RandLA-Net**](https://arxiv.org/abs/1911.11236) (Hu et al., CVPR 2020)提出了一种高效的随机采样和局部特征聚合策略，能够处理大规模点云数据。[**KPConv**](https://arxiv.org/abs/1904.08889) (Thomas et al., ICCV 2019)通过可变形卷积克服了点云的不规则性，在多个基准上取得了显著性能。语义分割的关键挑战在于处理点云的巨大规模和类别不平衡问题。常用技术包括**采样策略**、**加权损失函数**和后处理方法如**条件随机场**(Conditional Random Field, CRF)。**多模态信息融合**对提高分割精度尤为重要，特别是对于具有相似几何形状的类别。
 
 ### 位置识别与定位(Place Recognition, PR)
 
