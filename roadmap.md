@@ -16,13 +16,7 @@
 
 ### PointCNN与点卷积方法
 
-[**PointCNN**](https://arxiv.org/abs/1801.07791) (Li et al., NIPS 2018)通过**X-transform**操作将无序点集变换为局部隐式有序的特征，从而能够应用经典的卷积操作。它在分类和分割任务上都取得了优异的性能，展示了点卷积方法的潜力。
-
-其他点卷积方法如[**KPConv**](https://arxiv.org/abs/1904.08889) (Thomas et al., ICCV 2019)通过定义核点位置和权重实现点云上的卷积操作，而[**PointConv**](https://arxiv.org/abs/1811.07246) (Wu et al., CVPR 2019)则通过动态权重生成模拟连续卷积。
-
-[**DGCNN**](https://arxiv.org/abs/1801.07829) (Wang et al., TOG 2019)提出了**EdgeConv**操作，通过动态构建k近邻图并对边特征进行卷积，能够有效捕获局部结构信息。
-
-[**SpiderCNN**](https://arxiv.org/abs/1803.09263) (Xu et al., ECCV 2018)设计了一种基于泰勒展开的卷积核，能够更好地适应3D空间中的几何变化。这些方法在保持点云原始结构的同时，提供了强大的特征提取能力。
+[**PointCNN**](https://arxiv.org/abs/1801.07791) (Li et al., NIPS 2018)通过**X-transform**操作将无序点集变换为局部隐式有序的特征，从而能够应用经典的卷积操作。它在分类和分割任务上都取得了优异的性能，展示了点卷积方法的潜力。其他点卷积方法如[**KPConv**](https://arxiv.org/abs/1904.08889) (Thomas et al., ICCV 2019)通过定义核点位置和权重实现点云上的卷积操作，而[**PointConv**](https://arxiv.org/abs/1811.07246) (Wu et al., CVPR 2019)则通过动态权重生成模拟连续卷积。[**DGCNN**](https://arxiv.org/abs/1801.07829) (Wang et al., TOG 2019)提出了**EdgeConv**操作，通过动态构建k近邻图并对边特征进行卷积，能够有效捕获局部结构信息。
 
 ## 基于体素和柱体的方法
 
